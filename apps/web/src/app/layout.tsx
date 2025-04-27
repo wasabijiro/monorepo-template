@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@workspace/shadcn/globals.css";
 import "@mysten/dapp-kit/dist/index.css";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Providers } from "./providers/Providers";
 
@@ -33,7 +34,7 @@ export default function RootLayout({
 				<Providers>
 					<Header />
 					<main className="flex-1">{children}</main>
-					{/* <Footer /> */}
+					<Footer />
 				</Providers>
 			</body>
 		</html>
