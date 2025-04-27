@@ -27,3 +27,11 @@ typecheck:
 	bun run typecheck
 
 checkall: format lint typecheck
+
+create-package:
+	@read -p "Enter package name: " pkg_name; \
+	./scripts/create-package.sh $$pkg_name
+
+shadcn-add:
+	@read -p "Enter component name: " component_name; \
+	cd packages/shadcn && bunx --bun shadcn@canary add $$component_name
