@@ -1,0 +1,21 @@
+{
+	"name": "monorepo-template",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun run pm:dev",
+		"pm:dev": "pnpm -r --parallel --filter frontend --filter api dev",
+		"build": "bun run pm:build",
+		"pm:build": "pnpm -r --parallel --filter frontend build",
+		"format": "biome format . --write",
+		"lint": "biome check .",
+		"typecheck": "bunx tsc -b"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
