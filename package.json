@@ -4,13 +4,14 @@
 	"type": "module",
 	"scripts": {
 		"dev": "bun run pm:dev",
-		"pm:dev": "pnpm -r --parallel --filter frontend --filter api dev",
+		"pm:dev": "pnpm -r --parallel --filter web --filter api dev",
 		"build": "bun run pm:build",
-		"pm:build": "pnpm -r --parallel --filter frontend build",
+		"pm:build": "pnpm -r --parallel --filter web build",
 		"format": "biome format . --write",
 		"lint": "biome check .",
 		"typecheck": "bunx tsc -b"
 	},
+	"workspaces": ["apps/*", "packages/*"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest"
