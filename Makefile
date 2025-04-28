@@ -1,3 +1,5 @@
+PROJECT_NAME=monorepo-template-web
+
 install:
 	@echo "Installing dependencies for all packages..."
 	@bun install
@@ -35,3 +37,12 @@ create-package:
 shadcn-add:
 	@read -p "Enter component name: " component_name; \
 	cd packages/shadcn && bunx --bun shadcn@canary add $$component_name
+
+pages-build:
+	bun run pages:build
+
+pages-preview:
+	bun run pages:preview
+
+pages-deploy:
+	bun run pages:deploy --project-name $(PROJECT_NAME)
