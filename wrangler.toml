@@ -1,6 +1,7 @@
 name = "monorepo-template"
-main = "apps/web/.vercel/output/static"
 compatibility_date = "2024-04-29"
+
+pages_build_output_dir = "apps/web/.vercel/output/static"
 
 [build]
 command = "bun run build --filter web && cd apps/web && npx @cloudflare/next-on-pages@1"
