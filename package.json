@@ -9,7 +9,10 @@
 		"pm:build": "pnpm -r --parallel --filter web build",
 		"format": "biome format . --write",
 		"lint": "biome check .",
-		"typecheck": "bunx tsc -b"
+		"typecheck": "bunx tsc -b",
+		"pages:build": "NEXT_ON_PAGES_PACKAGE_MANAGER=bun pnpm -r --filter web run pages:build",
+		"pages:preview": "pnpm -r --filter web run pages:preview",
+		"pages:deploy": "pnpm -r --filter web run pages:deploy"
 	},
 	"workspaces": ["apps/*", "packages/*"],
 	"devDependencies": {

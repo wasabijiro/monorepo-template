@@ -10,6 +10,13 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["node_modules/", ".next/", "dist/", "build/", ".wrangler/"]
+		"ignore": [
+			"node_modules/",
+			".next/",
+			"dist/",
+			"build/",
+			".wrangler/",
+			".vercel/"
+		]
 	}
 }

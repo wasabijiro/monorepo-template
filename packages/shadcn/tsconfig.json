@@ -4,7 +4,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@workspace/shadcn/*": ["./src/*"]
-		}
+		},
+		"skipLibCheck": true
 	},
 	"include": ["."],
 	"exclude": ["node_modules", "dist"]

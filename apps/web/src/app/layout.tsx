@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Providers } from "./providers/Providers";
 
+export const runtime = "edge";
+
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],

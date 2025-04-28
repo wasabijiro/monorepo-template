@@ -1,7 +1,10 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 
-const app = new Hono().get("/", (c) =>
+export const runtime = "edge";
+
+const app = new Hono().get("/api/hello", (c) =>
 	c.json({ greeting: "Hello from Edge!" }),
 );
-export const GET = handle(app); // App Router 用エンドポイント化
+
+export const GET = handle(app);

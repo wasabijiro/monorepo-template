@@ -6,15 +6,18 @@
 		"dev": "bun run next dev",
 		"build": "bun run next build",
 		"start": "bun run next start",
-		"lint": "bun run next lint"
+		"lint": "bun run next lint",
+		"pages:build": "NEXT_ON_PAGES_PACKAGE_MANAGER=bun bunx @cloudflare/next-on-pages@1",
+		"pages:preview": "bun run pages:build && wrangler pages dev .vercel/output/static",
+		"pages:deploy": "bun run pages:build && wrangler pages deploy .vercel/output/static"
 	},
 	"dependencies": {
-		"@workspace/sui": "workspace:*",
+		"@mysten/dapp-kit": "^0.16.0",
+		"@mysten/sui": "^1.28.2",
+		"@tanstack/react-query": "^5.74.4",
 		"@workspace/logger": "workspace:*",
 		"@workspace/shadcn": "workspace:*",
-		"@mysten/dapp-kit": "^0.16.0",
-		"@mysten/sui.js": "^0.54.1",
-		"@tanstack/react-query": "^5.74.4",
+		"@workspace/sui": "workspace:*",
 		"hono": "^4.7.7",
 		"next": "15.3.1",
 		"react": "^19.0.0",

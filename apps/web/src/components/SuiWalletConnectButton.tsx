@@ -6,7 +6,7 @@ import {
 	useDisconnectWallet,
 	useSuiClient,
 } from "@mysten/dapp-kit";
-import { formatAddress } from "@mysten/sui.js/utils";
+import { formatAddress } from "@mysten/sui/utils";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
