@@ -1,5 +1,5 @@
-import { getFullnodeUrl } from "@mysten/sui.js/client";
-import { SuiClient } from "@mysten/sui.js/client";
+import { getFullnodeUrl } from "@mysten/sui/client";
+import { SuiClient } from "@mysten/sui/client";
 
 export const networks = {
 	testnet: { url: getFullnodeUrl("testnet") },
