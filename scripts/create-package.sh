@@ -25,18 +25,18 @@ bun init -y
 # package.jsonを更新
 cat > package.json << EOF
 {
-	"name": "@workspace/$PACKAGE_NAME",
-	"version": "0.1.0",
-	"module": "index.ts",
-	"type": "module",
-	"main": "index.ts",
-	"types": "index.ts",
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+  "name": "@workspace/$PACKAGE_NAME",
+  "version": "0.1.0",
+  "module": "index.ts",
+  "type": "module",
+  "main": "index.ts",
+  "types": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
 EOF
 

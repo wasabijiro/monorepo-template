@@ -9,20 +9,20 @@ import { SUI_BASE_UNIT, SUI_TYPE } from "./constants";
  * @returns Formatted balance string with 3 decimal places
  */
 export async function getSuiBalance(
-	suiClient: SuiClient,
-	address: string,
+  suiClient: SuiClient,
+  address: string,
 ): Promise<string> {
-	try {
-		const { totalBalance } = await suiClient.getBalance({
-			owner: address,
-			coinType: SUI_TYPE,
-		});
-		// Format balance
-		return formatSuiBalance(totalBalance);
-	} catch (error) {
-		logger.error("[Sui] Failed to fetch SUI balance", { error });
-		return "Error";
-	}
+  try {
+    const { totalBalance } = await suiClient.getBalance({
+      owner: address,
+      coinType: SUI_TYPE,
+    });
+    // Format balance
+    return formatSuiBalance(totalBalance);
+  } catch (error) {
+    logger.error("[Sui] Failed to fetch SUI balance", { error });
+    return "Error";
+  }
 }
 
 /**
@@ -31,5 +31,5 @@ export async function getSuiBalance(
  * @returns Formatted balance string with 3 decimal places
  */
 export function formatSuiBalance(balance: bigint | string): string {
-	return (Number(balance) / SUI_BASE_UNIT).toFixed(3);
+  return (Number(balance) / SUI_BASE_UNIT).toFixed(3);
 }
