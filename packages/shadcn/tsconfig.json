@@ -1,12 +1,19 @@
 {
-	"extends": "@workspace/typescript-config/react-library.json",
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@workspace/shadcn/*": ["./src/*"]
-		},
-		"skipLibCheck": true
-	},
-	"include": ["."],
-	"exclude": ["node_modules", "dist"]
+  "extends": "@workspace/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/shadcn/*": [
+        "./src/*"
+      ]
+    },
+    "skipLibCheck": true
+  },
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

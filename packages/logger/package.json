@@ -1,14 +1,14 @@
 {
-	"name": "@workspace/logger",
-	"version": "0.1.0",
-	"module": "index.ts",
-	"type": "module",
-	"main": "index.ts",
-	"types": "index.ts",
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+  "name": "@workspace/logger",
+  "version": "0.1.0",
+  "module": "index.ts",
+  "type": "module",
+  "main": "index.ts",
+  "types": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
