@@ -1,6 +1,6 @@
 {
-  "makefile.configureOnOpen": false,
-  "editor.detectIndentation": false,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
+	"makefile.configureOnOpen": false,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": true,
+	"editor.tabSize": 2
 }

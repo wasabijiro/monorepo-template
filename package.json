@@ -15,10 +15,7 @@
 		"pages:preview": "pnpm -r --filter web run pages:preview",
 		"pages:deploy": "pnpm -r --filter web run pages:deploy"
 	},
-	"workspaces": [
-		"apps/*",
-		"packages/*"
-	],
+	"workspaces": ["apps/*", "packages/*"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest"
