@@ -1,4 +1,9 @@
+package-lock.json
+# pnpm-lock.yaml # Include this in the repo for Cloudflare Pages to detect package manager
+yarn.lock
 bun.lockb
+bun.lock
+
 
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
