@@ -3,18 +3,18 @@
 	"version": "0.1.0",
 	"private": true,
 	"config": {
-		"NEXT_ON_PAGES_PACKAGE_MANAGER": "bun"
+		"NEXT_ON_PAGES_PACKAGE_MANAGER": "pnpm"
 	},
 	"scripts": {
 		"dev": "bun run next dev",
 		"build": "bun run next build",
 		"start": "bun run next start",
 		"lint": "bun run next lint",
-		"pages:build": "bunx @cloudflare/next-on-pages@1",
+		"pages:build": "pnpm dlx @cloudflare/next-on-pages@1",
 		"pages:preview": "wrangler pages dev .vercel/output/static",
 		"pages:deploy": "wrangler pages deploy .vercel/output/static",
-		"prepages:preview": "bun run pages:build",
-		"prepages:deploy": "bun run pages:build"
+		"prepages:preview": "pnpm run pages:build",
+		"prepages:deploy": "pnpm run pages:build"
 	},
 	"dependencies": {
 		"@mysten/dapp-kit": "^0.16.0",
@@ -30,17 +30,18 @@
 		"zod": "^3.24.3"
 	},
 	"devDependencies": {
-		"@workspace/eslint-config": "workspace:^",
-		"@workspace/typescript-config": "workspace:*",
 		"@cloudflare/next-on-pages": "^1.13.12",
 		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"@workspace/eslint-config": "workspace:^",
+		"@workspace/typescript-config": "workspace:*",
 		"eslint": "^9",
 		"eslint-config-next": "15.3.1",
 		"tailwindcss": "^4",
-		"typescript": "^5"
+		"typescript": "^5",
+		"vercel": "^41.7.0"
 	}
 }

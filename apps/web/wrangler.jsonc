@@ -2,7 +2,10 @@
 	"name": "monorepo-web",
 	"compatibility_date": "2025-04-27",
 	"compatibility_flags": ["nodejs_compat"],
-	"pages_build_output_dir": ".vercel/output/static"
+	"pages_build_output_dir": ".vercel/output/static",
+	"define": {
+		"process.env.NEXT_RUNTIME": "\"edge\""
+	}
 	// "vars": {
 	//   "MY_VAR": "my-variable"
 	// },
