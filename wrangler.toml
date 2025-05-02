@@ -1,0 +1,22 @@
+compatibility_date = "2025-04-27"
+compatibility_flags = ["nodejs_compat"]
+name = "monorepo-template-web"
+
+[build]
+command = "pnpm dlx @cloudflare/next-on-pages@latest --project-dir apps/web"
+
+[build.upload]
+dir = "./apps/web/.vercel/output/static"
+format = "directory"
+
+[site]
+bucket = "./apps/web/.vercel/output/static"
+
+[define]
+rootDirectory = "apps/web"
+
+[env.production]
+name = "monorepo-template-web"
+
+[env.preview]
+name = "monorepo-template-web-preview"

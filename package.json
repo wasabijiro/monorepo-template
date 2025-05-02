@@ -16,9 +16,13 @@
 		"pages:deploy": "pnpm -r --filter web run pages:deploy"
 	},
 	"workspaces": ["apps/*", "packages/*"],
+	"dependencies": {
+		"next": "15.3.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"vercel": "^41.7.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
