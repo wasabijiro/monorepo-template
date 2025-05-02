@@ -2,14 +2,19 @@
 	"name": "web",
 	"version": "0.1.0",
 	"private": true,
+	"config": {
+		"NEXT_ON_PAGES_PACKAGE_MANAGER": "bun"
+	},
 	"scripts": {
 		"dev": "bun run next dev",
 		"build": "bun run next build",
 		"start": "bun run next start",
 		"lint": "bun run next lint",
-		"pages:build": "NEXT_ON_PAGES_PACKAGE_MANAGER=bun bunx @cloudflare/next-on-pages@1",
-		"pages:preview": "bun run pages:build && wrangler pages dev .vercel/output/static",
-		"pages:deploy": "bun run pages:build && wrangler pages deploy .vercel/output/static"
+		"pages:build": "bunx @cloudflare/next-on-pages@1",
+		"pages:preview": "wrangler pages dev .vercel/output/static",
+		"pages:deploy": "wrangler pages deploy .vercel/output/static",
+		"prepages:preview": "bun run pages:build",
+		"prepages:deploy": "bun run pages:build"
 	},
 	"dependencies": {
 		"@mysten/dapp-kit": "^0.16.0",
