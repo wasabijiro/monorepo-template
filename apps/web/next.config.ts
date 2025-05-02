@@ -5,6 +5,7 @@ import type { NextConfig } from "next";
 const defineConfig = async (): Promise<NextConfig> => {
 	const config: NextConfig = {
 		/* config options here */
+		output: "standalone"
 	};
 
 	if (process.env.NODE_ENV === "development") {
