@@ -230,10 +230,8 @@ export default function BattleClock({
         } : {}}
         transition={{ duration: isComplete ? 1 : 0, times: [0, 0.3, 1] }}
       >
-        {/* Confetti animation on completion */}
         {isComplete && confettiElements}
 
-        {/* 7-Segment LED Style Countdown - Centered */}
         <div className="flex justify-center items-center flex-1">
           <SevenSegmentDisplay
             value={formatTime(remaining)}
@@ -242,23 +240,13 @@ export default function BattleClock({
           />
         </div>
 
-        {/* Progress Bar Container - Bottom */}
         <div className="w-full px-8 pb-4 relative">
-          {/* フェーズ名のラベル - 小さく表示 */}
-          <div className="flex justify-between text-xs mb-1">
-            <span className="text-teal-500">BUILD-UP</span>
-            <span className="text-red-500">CHALLENGE</span>
-          </div>
-
-          {/* バーの背景 */}
           <div className="w-full h-4 bg-gray-900 rounded-full overflow-hidden relative">
-            {/* チャレンジフェーズの開始位置マーカー */}
             <div
               className="absolute h-full w-1 bg-white opacity-50 z-10"
               style={{ left: `${challengeBoundaryPercent}%` }}
             />
 
-            {/* プログレスバー本体 - 左から右に進む、フェーズによって色が変わる */}
             <motion.div
               className={cn(
                 "h-full rounded-full",
@@ -270,12 +258,6 @@ export default function BattleClock({
             />
           </div>
 
-          {/* 現在のフェーズ表示 */}
-          <div className="mt-1 text-center text-xs">
-            <span className={isChallenge ? "text-red-500" : "text-teal-500"}>
-              {isChallenge ? "CHALLENGE PHASE" : "BUILD-UP PHASE"}
-            </span>
-          </div>
         </div>
       </motion.div>
     </AnimatePresence>
