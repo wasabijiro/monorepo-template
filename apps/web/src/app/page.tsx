@@ -1,5 +1,6 @@
 import LWCChart from "@/components/LWCChart";
 import BattleClock from "@/components/BattleClock";
+import { CoinList } from "@/components/CoinList";
 
 export default function Home() {
 	return (
@@ -8,7 +9,8 @@ export default function Home() {
 				totalSeconds={15}
 				challengeSeconds={5}
 			/>
-			<LWCChart />
+      <CoinList />
+			{/* <LWCChart /> */}
 		</div>
 	);
 }
